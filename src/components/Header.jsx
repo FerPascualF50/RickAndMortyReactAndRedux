@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
 import { setSection } from '../actions';
-import Logo from '../asstes/Logo.png';
+import Logo from '../assets/Logo.png';
 
 
 const Header = () => {
@@ -14,6 +14,7 @@ const Header = () => {
 
 
   return (
+    
     <header>
       <figure>
         <img src={Logo} alt="Rick and Morty Logo" />

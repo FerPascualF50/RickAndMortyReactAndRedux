@@ -1,30 +1,33 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {compose} from 'redux';
-import {createStore, apllyMiddleware} from 'redux';
-import logger from 'redux';
+import {createStore, applyMiddleware} from 'redux';
+import logger from 'redux-logger';
 import reducer  from './reducers';
 import App from './routes/App';
 
 
 const initialState = {
-  favoritesCharacters: [],
+  favoriteCharacters: [],
   sectionActive: 'Characters',
 };
 
-const composeEnahnders =  window.__REDDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+
+const composeEnahnders =   compose;
 const store = createStore(
   reducer,
   initialState,
-  composeEnahnders(apllyMiddleware(logger)));
+  composeEnahnders(applyMiddleware(logger))
+  );
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <Provider store = {store}>
     <App />
-  </Provider>
+  </Provider>,
+  document.getElementById('root')
 );
 
 

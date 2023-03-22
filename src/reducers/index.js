@@ -4,12 +4,12 @@ const reducer = (state, action) => {
     case 'SET_FAVORITE':
       return {
         ...state,
-        favoriteCharacter: [...state.favoriteCharacter, action.payload],
+        favoriteCharacters: [...state.favoriteCharacters, action.payload],
       };
     case 'DELETE_FAVORITE':
       return {
         ...state,
-        favoriteCharacter: state.favoriteCharacter.filter(
+        favoriteCharacters: state.favoriteCharacters.filter(
           (items) => items.data.id !== action.payload,
         ),
       };
