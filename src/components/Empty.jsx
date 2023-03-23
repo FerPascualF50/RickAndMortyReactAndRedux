@@ -2,7 +2,7 @@ import React from "react";
 import empty from '../assets/empty.png';
 import Container from '@mui/system/Container';
 import CssBaseline from '@mui/material/CssBaseline';
-import '@fontsource/roboto/700.css';
+//import '@fontsource/roboto/700.css';
 
 
 const Empty = () => (

@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import { createPortal } from "react-dom";
-import { ReactComponent as SVGClose } from '../assets/star.svg';
 
 
 const Modal = (props) =>
@@ -8,7 +7,7 @@ const Modal = (props) =>
     createPortal(
       <Fragment>
         <figure onClick={props.onClose}>
-          <SVGClose>X</SVGClose>
+          X
         </figure>
         <Fragment>{props.children}</Fragment>
       </Fragment>,
