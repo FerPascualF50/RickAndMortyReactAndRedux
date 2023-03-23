@@ -1,8 +1,9 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Character from './Character';
 import Error from './Error';
 import Loader from './Loader';
+import { Box } from "@mui/system";
 
 
 const CharacterList = () => {
@@ -29,17 +30,36 @@ const CharacterList = () => {
   }, []);
 
   return (
-    <Fragment>
+    <Box
+    sx={{
+      display: 'flex',
+      flexWrap: 'wrap',
+      '& > :not(style)': {
+        m: 1,
+        width: 300,
+        height: 550,
+        align: 'center'
+      },
+    }}
+    
+    >
       {loading ? (
         <Loader />
       ) : error ? (
         <Error />
       ) : (
         characters.map((character) => (
-          <Character key={character.id} data={character} />
-        ))
+          
+          <Character key={character.id} data={character} />)
+        )
       )}
-    </Fragment>
+
+
+
+    </Box>
+
+
+
   );
 };
 

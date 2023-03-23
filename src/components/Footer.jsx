@@ -5,20 +5,18 @@ const Footer = () => (
     <div>
       Powered by Fer Pascual
       {' '}
-      <span role = 'img' aria-label="heart"></span>
+      <span role='img' aria-label="heart"></span>
       {' '}
-      
       <a
-      href="https://www.linkedin.com/in/fernando-pascual-full-stack-developer/"
-      rel="noopener noreferrer"
-      target= "_blank"
+        href="https://www.linkedin.com/in/fernando-pascual-full-stack-developer/"
+        rel="noopener noreferrer"
+        target="_blank"
       >
-          {' '}
+        {' '}
         <span> Fer Pascual</span>
       </a>
-
     </div>
-      </footer>
+  </footer>
 
 
 )
