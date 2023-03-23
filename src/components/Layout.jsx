@@ -7,7 +7,7 @@ import Header from './Header'
 const Layout = ({ children }) => (
   <React.Fragment>
     <CssBaseline />
-    <Container sx={{bgcolor: '#fb646799', maxWidth: 'false'  } } >
+    <Container sx={{bgcolor: '#fb646799'}}>
       <Header />
       {children}
       <Footer />

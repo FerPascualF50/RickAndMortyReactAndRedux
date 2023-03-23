@@ -54,45 +54,6 @@ const Character = (props) => {
   });
 
   return (
-
-    // <ImageList sx={{ width: 500, height: 600 }}>
-    //   <ImageListItem key="Subheader" cols={4}>
-    //   </ImageListItem>
-    //   <ImageListItem key={image}>
-    //     <img
-    //       src={`${image}?w=248&fit=crop&auto=format`}
-    //       srcSet={`${image}?w=248&fit=crop&auto=format&dpr=2 2x`}
-    //       alt='Morty'
-    //       loading="lazy"
-    //     />
-    //     <ImageListItemBar
-    //       title={name}
-    //       status={status}
-    //       specie={species}
-    //       gender={gender}
-    //       actionIcon={
-    //         <IconButton
-    //           sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-    //           aria-label={`info about ${name}`}
-    //         >
-    //           <InfoIcon onClick={handleOpenModal} />
-    //           {favorite ?
-    //             <HeartBrokenIcon onClick={() => handleDeleteFavorite(id)} /> :
-    //             <FavoriteIcon onClick={handleSetFavorite} />}
-    //         </IconButton>
-    //       }
-    //     />
-    //     <Modal isOpen={modal} onClose={handleCloseModal}>
-    //       <CharacterDetails data={data} />
-    //     </Modal>
-    //   </ImageListItem>
-
-    // </ImageList>
-
-
-
-
-
     <Card sx={{ maxWidth: 270 }} >
       <CardMedia
         sx={{ height: 350 }}
@@ -113,7 +74,6 @@ const Character = (props) => {
       <CardActions>
         {favorite ?
           <HeartBrokenIcon onClick={() => handleDeleteFavorite(id)} cursor='pointer' 
-          
           /> :
           <FavoriteIcon onClick={handleSetFavorite} cursor='pointer' />}
         <Button onClick={handleOpenModal} size="small">Details...</Button>
@@ -122,48 +82,6 @@ const Character = (props) => {
         </Modal>
       </CardActions>
     </Card>
-
-
-
-
-
-
-    // <div >
-    //   <img src={image} alt='Character' />
-    //   <div>
-    //     <h2>{name}
-    //       {favorite ?
-    //         <SVGStar onClick={() => handleDeleteFavorite(id)} cursor='pointer' /> :
-    //         <SVGStar onClick={handleSetFavorite} cursor='pointer' />}
-    //     </h2>
-    //     <p
-    //     >
-    //       <span>Status:</span>
-    //       {' '}
-    //       {status}
-    //     </p>
-
-    //     <p
-    //     >
-    //       <span>Species:</span>
-    //       {' '}
-    //       {species}
-    //     </p>
-    //     <p
-    //     >
-    //       <span>Gender:</span>
-    //       {' '}
-    //       {gender}
-    //     </p>
-
-    //     <p onClick={handleOpenModal}  >
-    //       More Details...
-    //     </p>
-    //   </div>
-    //   <Modal isOpen={modal} onClose={handleCloseModal}>
-    //     <CharacterDetails data={data} />
-    //   </Modal>
-    // </div>
   )
 }
 

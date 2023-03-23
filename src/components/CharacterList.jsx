@@ -34,6 +34,7 @@ const CharacterList = () => {
     sx={{
       display: 'flex',
       flexWrap: 'wrap',
+      justifyContent:'center',
       '& > :not(style)': {
         m: 1,
         width: 300,
@@ -49,17 +50,10 @@ const CharacterList = () => {
         <Error />
       ) : (
         characters.map((character) => (
-          
           <Character key={character.id} data={character} />)
         )
       )}
-
-
-
     </Box>
-
-
-
   );
 };
 

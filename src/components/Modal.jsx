@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { createPortal } from "react-dom";
 import { ReactComponent as SVGClose } from '../assets/star.svg';
 
@@ -6,13 +6,13 @@ import { ReactComponent as SVGClose } from '../assets/star.svg';
 const Modal = (props) =>
   props.isOpen ?
     createPortal(
-      <div>
-        <figure cursor='pointer' onClick={props.onClose} > X
-          <SVGClose >X</SVGClose>
+      <Fragment>
+        <figure onClick={props.onClose}>
+          <SVGClose>X</SVGClose>
         </figure>
-        <div>{props.children}</div>
-      </div>,
-      document.getElementById("modal")
+        <Fragment>{props.children}</Fragment>
+      </Fragment>,
+      document.getElementById('modal'),
     )
     : '';
 
