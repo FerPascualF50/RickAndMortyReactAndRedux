@@ -13,9 +13,7 @@ const initialState = {
   sectionActive: 'Characters',
 };
 
-
-
-const composeEnahnders =   compose;
+const composeEnahnders =   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE ||compose;
 const store = createStore(
   reducer,
   initialState,
