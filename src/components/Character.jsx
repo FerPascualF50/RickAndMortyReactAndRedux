@@ -6,17 +6,15 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import HeartBrokenIcon from '@mui/icons-material/HeartBroken'
-import Modal from './Modal';
+import BasicModal from './Modal';
 import CharacterDetails from './CharacterDetails';
-import useModal from '../custom-hooks/useModal';
 
 
 const Character = (props) => {
-  const {modal, handleCloseModal, handleOpenModal } = useModal();
+  //const {modal, handleCloseModal, handleOpenModal } = useModal();
   const [favorite, setFavorite] = useState(false);
 
   // props
@@ -71,10 +69,9 @@ const Character = (props) => {
           <HeartBrokenIcon onClick={() => handleDeleteFavorite(id)} cursor='pointer' 
           /> :
           <FavoriteIcon onClick={handleSetFavorite} cursor='pointer' />}
-        <Button onClick={handleOpenModal} size="small">Details...</Button>
-        <Modal isOpen={modal} onClose={handleCloseModal}>
-          <CharacterDetails data={data} />
-        </Modal>
+        <BasicModal >
+        <CharacterDetails data={data} />
+        </BasicModal>
       </CardActions>
     </Card>
   )
