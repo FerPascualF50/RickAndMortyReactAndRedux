@@ -17,7 +17,7 @@ const Character = (props) => {
   //const {modal, handleCloseModal, handleOpenModal } = useModal();
   const [favorite, setFavorite] = useState(false);
 
-  // props
+  // props //
   const { data, favoriteCharacters } = props;
   const { id, image, name, status, species, gender } = data;
 
